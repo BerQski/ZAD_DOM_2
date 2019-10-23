@@ -39,27 +39,29 @@
 
 // const array1 = [1, 2, 3, 4];
 // const reducer = (accumulator, currentValue) => accumulator + currentValue;
-
-var ar=[1,"s",23,8,4,7,"o",7];
-const arFilltered=ar.filter(function(arVal){
-    return !isNaN(arVal);}
-);
-const f=ar.reduce(function(a,b){
-     return a+b;
-});
-const d=arFilltered.reduce(function(a,b){
-    return a+b;
-});
-console.log("Suma tabeli="+ d, "i jest to zmienna typu:"+ typeof d);
-console.log(f, typeof f);// ex: sumuje do momentu az napotka string, potem agreguje, zwraca jako string
-
-//const newArray = oldArray.filter( value => !Number.isNaN(value) );
-// var ar=[1,"e",23,8,4,"J",4,7];
-// const newArray = ar.filter( x => {
-//     return !isNaN(x);
-// } );
-// console.log(newArray);
-// const newArray = [1,"e",23,8,4,"J",4,7].filter(function (hfff) {
-//     return !Number.isNaN(hfff);
+//#1
+// var ar=[1,"s",23,8,4,7,"o",7];
+// const arFilltered=ar.filter(function(arVal){
+//     return !isNaN(arVal);}
+// );
+// const f=ar.reduce(function(a,b){
+//      return a+b;
 // });
-// console.log(newArray);
+// const d=arFilltered.reduce(function(a,b){
+//     return a+b;
+// });
+// console.log("Suma tabeli="+ d, "i jest to zmienna typu:"+ typeof d);
+// console.log(f, typeof f);// ex: sumuje do momentu az napotka string, potem agreguje, zwraca jako string
+
+//#2
+var aray=[6,6,23,8,4,8,3,99];
+const first=aray[0], last=aray[aray.length-1];
+ const sumAr=function (aray) 
+   {
+     let first=(aray[0]);
+     let last=(aray[aray.length-1]);
+return first+last;
+    };
+console.log(first,last);
+
+console.log(function);
