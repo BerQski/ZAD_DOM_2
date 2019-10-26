@@ -40,9 +40,9 @@
 // const array1 = [1, 2, 3, 4];
 // const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
-var ar=[1,"e",23,8,4,"J",4,7];
+var ar=[1,"s",23,8,4,7,"o",7];
 const arFilltered=ar.filter(function(arVal){
-    return isNaN(arVal);}
+    return !isNaN(arVal);}
 );
 const f=ar.reduce(function(a,b){
      return a+b;
