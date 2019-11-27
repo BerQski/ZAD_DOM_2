@@ -1,4 +1,3 @@
-
 //#1
 // var ar=[1,"s",23,8,4,7,"o",7];
 // const arFilltered=ar.filter(function(arVal){
@@ -27,7 +26,7 @@
 
 // var aray=[6,2,4,3];
 // aray.forEach(function(element) {
-  
+
 //   i = 1;
 //   b = 1;
 //   while (i < element) {
@@ -59,13 +58,13 @@
 
 // while (i<=(dyn.length-1)/2){z.push(dyn[a]+dyn[b]);a=a+2, b=b+2, i++}
 //   return z;
- 
+
 // }
 // console.log(par(array))
 
 //#6 sumting wrong nie tedy droga
 // let array = [7, 1, 2, 5, 10];
- 
+
 // function srif(z)
 //  let a=0
 //  let b=0
@@ -80,74 +79,98 @@
 //  let i=0,a=0,b=1,z=[];
 
 //   while (i<=(dyn.length-2)/2) {srif(z);a=a+2, b=b+2, i++};
-  
+
 //   return z;
- 
+
 // }
 //  console.log(par(array));
 // console.log(z);
 
-//7
+//#7
 
 // let array = [7, 1, 2, 5, 10, 111, 121, 23, 45, 77];
 
 // function getaRa(arA) {
-//   
-//   min=0;
-//   max=arA.length-1;
-//   return arA[Math.floor(Math.random()*(max-min+1))+min]
+//   min = 0;
+//   max = arA.length - 1;
+//   return arA[Math.floor(Math.random() * (max - min + 1)) + min];
 // }
 // console.log(getaRa(array));
 
 //#8
 
-// let array = [7, 1, 2, 5, 10, 111, 121, 23, 45, 77];
+// let array = [7, 1, 2, 5, 10, 45, 77];
 
-// let cOunter=3;
+// let cOunter = 8;
 
-// function untillcOu(aRa,cOu) {
-//   i=0;
-//   z=[]
-//   while (i<cOu) {
-//       min=0;
-//       max=aRa.length-1;
-//       z.push(aRa[Math.floor(Math.random()*(max-min+1))+min]); i++;
-//     }
-//     console.log(Math.min(...z));
-//     return z;
-
+// function untillcOu(aRa, cOu) {
+//   i = 0;
+//   z = [];
+//   while (i < cOu) {
+//     // min = 0;
+//     // max = aRa.length;
+//     z.push(aRa[Math.floor(Math.random() * aRa.length)]);
+//     i++;
 //   }
+//   //console.log(Math.min(...z));
+//   return z;
+// }
 
-// console.log(untillcOu(array,cOunter));
+// console.log(untillcOu(array, cOunter));
 
-//9 sumting wrong 
+//9 yay
 
-// let array = [7, 1, 2, 5, 10, 77];
+let array = [1, 1, 1, 2, 1, 1, 1, 1];
+let szalka1 = [];
+let szalka2 = [];
+let szalka3 = [];
+function untillEnd(aRa, cOn, ff) {
+  let i = 1;
+  while (i <= cOn) {
+    ff.push(aRa.splice(Math.floor(Math.random() * aRa.length), 1));
+    i++;
+  }
+  return ff.flat();
+}
 
-// function untillEnd(aRa) {
-//   end=1;
-//   i=0;
-//   z=[];
-//   while (end>0) {
-//       end=aRa.length-1;
-//       min=0;
-//       max=aRa.length-1; 
-//       z.push(aRa.splice(([Math.floor(Math.random()*(max-min+1))+min]),1)); i++;
-//     }
-//     // return Array.flatt(z);
-//     // console.log(Array.flatt(z));
-//     return (z);
-
-//   }
-//   console.log(untillEnd(array));
-
-// console.log(dfQ);
-
-
+console.log(untillEnd(array, 3, szalka1));
+console.log(untillEnd(array, 3, szalka2));
+console.log(untillEnd(array, 3, szalka3));
+// console.log(array);
+function comPare(szal1, szal2, szal3) {
+  const a = szal1.reduce((a, b) => a + b);
+  const b = szal2.reduce((a, b) => a + b);
+  const c = szal3.reduce((a, b) => a + b);
+  if (a == b) {
+    if (szal3[0] > szal3[1]) {
+      return szal3[0];
+    } else {
+      return szal3[1];
+    }
+  } else if (a < b) {
+    if (szal2[0] > szal2[1]) {
+      return szal2[0];
+    } else if (szal2[2] > szal2[1]) {
+      return szal2[2];
+    } else {
+      return szal2[1];
+    }
+  } else {
+    if (szal1[0] > szal1[1]) {
+      return szal1[0];
+    } else if (szal1[2] > szal1[1]) {
+      return szal1[2];
+    } else {
+      return szal1[1];
+    }
+  }
+}
+console.log(comPare(szalka1, szalka2, szalka3));
+// const a = kule.reduce((a, b) => a + b);
+// console.log(a);
 //#11
 
 // let dniTyg = ["Niedziela", "Nieszczesliwnik", "Wt", "Połmetek", "Czw", "Piatunio", "Sobota"]
-
 
 // function dzienTyg() {
 //   var dzien = new Date();
@@ -156,8 +179,6 @@
 // }
 // console.log("Dzisiaj jest :"+dzienTyg(dniTyg))
 // #12
-
-
 
 // #13
 
@@ -169,9 +190,7 @@
 //                 odejmowanie: a-b,
 //                 mnożenie:    a*b,
 //                 dzielenie:   a/b,};
-// return operacje ;               
+// return operacje ;
 // }
 
-
 // console.log(matematyka(zmiA,zmiB));
-
